@@ -24,7 +24,7 @@ export const ListItem = ({ title, created, updated, tag, slug }: ItemMeta) => (
       {
         tag.map((tagName) => (
           <Link
-            className="rounded-full bg-gray-200 text-gray-400 px-2"
+            className="rounded bg-gray-200 text-gray-500 px-2"
             to={ `/tag/${tagName}` }
           >
            { `#${tagName}` }
