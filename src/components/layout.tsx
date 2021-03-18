@@ -29,7 +29,9 @@ const Layout = ({ children }: LayoutProps) => {
   const siteTitle: string = data.site.siteMetadata?.title || `Title`
 
   return (
-    <>
+    <div
+      className="min-h-screen"
+    >
       <Header siteTitle={ siteTitle } />
       <div
         style={{
@@ -49,7 +51,7 @@ const Layout = ({ children }: LayoutProps) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

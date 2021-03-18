@@ -45,7 +45,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <div
+        className=""
+      >
         {
           itemMetas.map((item) => ListItem(item))
         }
