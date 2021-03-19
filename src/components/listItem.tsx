@@ -3,32 +3,34 @@ import { ItemMeta } from "../types/itemMeta"
 import { Link } from "gatsby"
 import dayjs from "dayjs"
 
-export const ListItem = ({ title, created, updated, tag, slug }: ItemMeta) => (
+export const ListItem = ({ title, created, tag, slug }: ItemMeta) => (
   <div
-    className="container mx-auto mb-8 p-6 rounded-md shadow-md bg-white"
+    className="container mx-auto mb-8"
   >
-    <Link
-      to={ `/${slug}` }
-    >
-      <h2
-        className="text-navy-700"
-      >{ title }</h2>
-    </Link>
     <div
-      className="flex flex-row space-x-4"
+      className="flex flex-row justify-between pb-2"
     >
-      <p className="text-navy-300">作成日: { dayjs(created).format("YYYY-MM-DD") }</p>
-      <p className="text-navy-300">最終更新日: { dayjs(updated).format("YYYY-MM-DD") }</p>
+      <Link
+        to={ `/${slug}` }
+      >
+        <h2
+          className="text-navy-700 my-auto"
+        >{ title }</h2>
+      </Link>
+      <p className="text-navy-300 my-auto">{ dayjs(created).format("YYYY-MM-DD") }</p>
     </div>
     <div className="flex flex-row space-x-2">
       {
         tag.map((tagName) => (
-          <Link
+          // TODO: tagでの絞り込みに対応後，Linkにする
+          // <Link
+          <div
             className="rounded bg-gray-200 text-gray-500 px-2"
-            to={ `/tag/${tagName}` }
+            // to={ `/tag/${tagName}` }
           >
-           { `#${tagName}` }
-          </Link>
+           { `${tagName}` }
+          </div>
+          // </Link>
         ))
       }
     </div>

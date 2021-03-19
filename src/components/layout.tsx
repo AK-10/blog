@@ -30,27 +30,33 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div
-      className="min-h-screen"
+      className="flex flex-col min-h-screen bg-gray-50"
     >
       <Header siteTitle={ siteTitle } />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        className="flex-grow"
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
+        <main
+          className="bg-gray-50 w-full mx-auto"
+        >
+          <div
+            className="max-w-prose container mx-auto py-4"
+          >
+            {children}
+          </div>
+        </main>
+      </div>
+      <footer
+        className="flex text-navy-700 w-full border-t"
+      >
+        <div
+          className="m-0 mx-auto max-w-screen-lg"
         >
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   )
 }
