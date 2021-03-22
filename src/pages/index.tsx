@@ -16,7 +16,7 @@ const indexQuery = graphql`
             created
             updated
             slug
-            tag
+            tags
           }
         }
       }
@@ -27,20 +27,13 @@ const indexQuery = graphql`
 function itemMetaFromEdge(edge: any): ItemMeta {
   const item = edge.node.frontmatter
 
-  return {
-    title: item.title,
-    created: new Date(item.created),
-    updated: new Date(item.updated),
-    tag: item.tag,
-    slug: item.slug
-  }
+  return new ItemMeta(item.title, item.created, item.updated, item.tags, item.slug)
 }
 
 const IndexPage = () => {
   const data = useStaticQuery(indexQuery)
   console.log(data.allMarkdownRemark.edges)
   const itemMetas: Array<ItemMeta> = data.allMarkdownRemark.edges.map(itemMetaFromEdge)
-  console.log(itemMetas)
 
   return (
     <Layout>

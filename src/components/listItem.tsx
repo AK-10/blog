@@ -1,9 +1,8 @@
 import React from "react"
 import { ItemMeta } from "../types/itemMeta"
 import { Link } from "gatsby"
-import dayjs from "dayjs"
 
-export const ListItem = ({ title, created, tag, slug }: ItemMeta) => (
+export const ListItem = (item : ItemMeta) => (
   <div
     className="container mx-auto mb-8"
   >
@@ -11,17 +10,17 @@ export const ListItem = ({ title, created, tag, slug }: ItemMeta) => (
       className="flex flex-row justify-between pb-2"
     >
       <Link
-        to={ `/${slug}` }
+        to={ item.path() }
       >
         <h2
           className="text-navy-700 my-auto"
-        >{ title }</h2>
+        >{ item.title }</h2>
       </Link>
-      <p className="text-navy-300 my-auto">{ dayjs(created).format("YYYY-MM-DD") }</p>
+      <p className="text-navy-300 my-auto">{ item.humanReadableCreated() }</p>
     </div>
     <div className="flex flex-row space-x-2">
       {
-        tag.map((tagName) => (
+        item.tags.map((tagName) => (
           // TODO: tagでの絞り込みに対応後，Linkにする
           // <Link
           <div
