@@ -13,8 +13,10 @@ export const ListItem = (item : ItemMeta) => (
         to={ item.path() }
       >
         <h2
-          className="text-navy-700 my-auto"
-        >{ item.title }</h2>
+          className="text-navy-700 my-auto text-2xl font-medium"
+        >
+          { item.title }
+        </h2>
       </Link>
       <p className="text-navy-300 my-auto">{ item.humanReadableCreated() }</p>
     </div>
