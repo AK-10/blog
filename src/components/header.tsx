@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
   <header
-    className="bg-navy-500 items-center max-w-screen"
+    className="px-6 md:px-0 bg-navy-500 items-center max-w-screen"
   >
     <div
       className="m-0 mx-auto py-2 max-w-prose flex flex-row justify-between"

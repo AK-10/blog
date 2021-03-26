@@ -9,7 +9,6 @@ import React, { ReactNode } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-// import "./layout.css"
 
 interface LayoutProps {
   children: ReactNode
@@ -34,7 +33,7 @@ const Layout = ({ children }: LayoutProps) => {
     >
       <Header siteTitle={ siteTitle } />
       <div
-        className="flex-grow"
+        className="px-6 md:px-0 flex-grow"
       >
         <main
           className="bg-gray-50 w-full mx-auto"
