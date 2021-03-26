@@ -1,11 +1,13 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import ReactMarkDown from "react-markdown"
+import SEO from "../components/seo"
 
 function Article({ pageContext }) {
   const { metaData, rawMarkdownBody } = pageContext
   return (
     <Layout>
+      <SEO title={metaData.title}/>
       <div
         className="flex flex-col border-b border-navy-100"
       >
