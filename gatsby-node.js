@@ -19,6 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
               tags
             }
             html
+            rawMarkdownBody
           }
         }
       }
@@ -40,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: articleTemplate,
       context: {
         metaData: frontmatter,
-        html: node.html
+        rawMarkdownBody: node.rawMarkdownBody
       },
     })
   })
