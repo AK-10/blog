@@ -1,12 +1,12 @@
 ---
 created: "2021-3-30"
 updated: "2021-3-30"
-title: "ubuntuのデュアルディスプレイ難しい"
+title: "ubuntuのデュアルディスプレイは難しい"
 tags:
   - "開発環境"
   - "ubuntu"
   - "GPU"
-slug: "multi_display"
+slug: "dual_display"
 ---
 
 ## QHD ディスプレイを買った

@@ -12,12 +12,12 @@ function Article({ pageContext }) {
         className="flex flex-col border-b border-navy-100"
       >
         <p
-          className="mx-auto text-navy-500"
+          className="mx-auto text-navy-500 text-center"
         >
           posted: {metaData.created} | updated: {metaData.updated}
         </p>
         <h1
-          className="my-2 text-3xl sm:text-4xl md:text-5xl mx-auto font-medium text-navy-700 leading-normal"
+          className="my-2 text-3xl sm:text-4xl md:text-5xl text-center mx-auto font-medium text-navy-700 leading-normal"
         >
           {metaData.title}
         </h1>

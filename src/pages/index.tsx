@@ -8,7 +8,7 @@ import { ListItem } from "../components/listItem"
 
 const indexQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: ASC, fields: frontmatter___created }, limit: 10) {
+    allMarkdownRemark(sort: { fields: frontmatter___created, order: DESC }, limit: 10) {
       edges {
         node {
           frontmatter {
