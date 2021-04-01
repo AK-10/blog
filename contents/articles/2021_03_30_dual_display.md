@@ -1,6 +1,6 @@
 ---
-created: "2021-3-30"
-updated: "2021-3-30"
+created: "2021-03-30"
+updated: "2021-03-30"
 title: "ubuntuのデュアルディスプレイは難しい"
 tags:
   - "開発環境"

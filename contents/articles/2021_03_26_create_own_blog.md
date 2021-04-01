@@ -1,6 +1,6 @@
 ---
-created: "2021-3-26"
-updated: "2021-3-26"
+created: "2021-03-26"
+updated: "2021-03-26"
 title: "gatsby + typescriptでブログを作った"
 tags:
   - "typescript"
