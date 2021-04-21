@@ -44,7 +44,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "create_page": "cp contents/templates/template.md contents/articles/`date +%Y_%m_%d_new.md`"
   },
   "repository": {
     "type": "git",
